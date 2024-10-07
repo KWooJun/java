@@ -1,4 +1,4 @@
-package com.green.day01.ch02;
+package com.green.day01.ch03;
 
 public class Constants {
     public static void main(String[] args) {
