@@ -12,6 +12,8 @@ public class PrimitiveVsReferenceTest {
         changeNum(num);
         System.out.println("num : " + num);
 
+        Integer num2 = num;
+
         NumberBox nb = new NumberBox();
         nb.num = 10;
         changeNum(nb);

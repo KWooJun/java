@@ -2,12 +2,12 @@ package com.green.day06.ch09;
 
 public class AccessLevelModifiers {
     /*
-    접근 수준 지시자 : private, default, protected, public
+    접근 수준 지시자 : private, default(작성 안함), protected, public
     
     private     : class 내에서만 접급 가능
     default     : private + 같은 패키지면 접근 가능 >> 사용안함
     protected   : default + 상속관계면 접근 가능
-    public      : 무조건 접근 가능
+    public      : 무조건 접근 가능 , 완전 오픈
 
     class 는 보통 public 붙이고
     멤버필드는 대부분 private 이다.

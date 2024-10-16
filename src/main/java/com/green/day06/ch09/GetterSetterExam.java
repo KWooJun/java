@@ -24,9 +24,7 @@ class Student{
     private float height;
 
     //this 는 상수이고 나 자신의 주소값이 저장된 공간(나 자신을 가리킨다)
-
     //name-setter
-
     public void setName(String name){
         this.name = name;
     }

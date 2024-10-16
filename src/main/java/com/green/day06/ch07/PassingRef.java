@@ -25,6 +25,7 @@ public class PassingRef {
 //        만약 아래처럼 적었다면 check 메소드는 non-static 메소드였다.
 //        PassingRef pf = new PassingRef();
 //        pf.check(ba);
+
         //1. void, return
         //2. static, non-static
     }
