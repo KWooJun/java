@@ -23,7 +23,7 @@ public class MethodStudy {
         sum(5, 7); // sum 메소드 호출
         sum(15, 17); // sum 메소드 호출
         int result = returnsum(5 , 7);
-        System.out.println("result : " + result);
+        System.out.println("result : " + result); //()안에 들어가는 것을 인자, argument (아그먼트)라고 부름
         System.out.println("result2 : " + returnsum(15, 17));
         System.out.println("result2 : " + 32);
     }
