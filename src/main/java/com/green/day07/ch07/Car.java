@@ -18,7 +18,7 @@ public class Car {
      */
 
     Car(){ //기본 생성자
-        this("white", "auto", 4);
+        this("white", "auto", 4); //하드코딩 되었다. 기본생성자로 객체 생성시 항상 같은 값이다.
         //this.introduce();
         //introduce();
     }
