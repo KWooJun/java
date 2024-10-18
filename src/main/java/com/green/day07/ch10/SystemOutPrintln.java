@@ -4,7 +4,7 @@ import java.io.PrintStream;
 
 public class SystemOutPrintln {
     public static void main(String[] args) {
-        //System.abc.kkk().ggg;  . 앞에있는 것은 객체의 주소값
+       // System.abc.kkk().ggg;  //. 앞에있는 것은 객체의 주소값
 
         //System.abc 의 결과물을 "A" 지칭하자
         //A.kkk().ggg

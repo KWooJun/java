@@ -14,6 +14,11 @@ public class ArrayIsInstance {
         float[] ar3;
         ar3 = new float[9];
 
+        //Integer i = new Integer(10);
+        Integer i = Integer.valueOf(10);
+        Integer i2 = Integer.valueOf(10);
+
+        System.out.println(Double.valueOf(8.5));
         System.out.printf("ar1.length : %d\n", ar1.length);
         System.out.printf("ar2.length : %d\n", ar2.length);
         System.out.printf("ar3.length : %d\n", ar3.length);

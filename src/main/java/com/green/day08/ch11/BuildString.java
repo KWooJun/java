@@ -4,6 +4,15 @@ package com.green.day08.ch11;
 //p.264 ~ 269
 public class BuildString {
     public static void main(String[] args) {
+
+        StringBuilder sb3 = new StringBuilder("123");
+        sb3.append(45678).delete(0, 2).replace(0, 3, "kk");
+        System.out.println("sb3 : " + sb3);
+        //123
+        //12345678
+        //345678
+        //kk678
+
         //문자열 "123"이 저장된 인스턴스 생성
 
         StringBuilder sb = new StringBuilder("123");
