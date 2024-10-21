@@ -17,6 +17,7 @@ public class EnhancedForInst {
         enhanced-for 문을 사용하여 제품명, 가격을 콘솔에 출력하고
         모든 제품의 가격을 더한 값을 출력해주세요.
          */
+
         int sum = 0;
         for(Product item : arr){
             System.out.println(item);
