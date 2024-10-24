@@ -63,15 +63,38 @@ public class PolyStudy {
         System.out.println(ani4 instanceof BullDog);
         System.out.println(ani4 instanceof Bird);
 
+        Cat cat2 = new Cat();
+        Dog dog2 = new Dog();
+        BullDog bullDog = new BullDog();
+        Bird bird = new Bird();
+        //동물을 울려주세요
+        //PolyStudy 아래에 있는 메소드
+        //void static 파라미터 1개
+
+        animalCrying(cat2);
+        animalCrying(dog2);
+        animalCrying(bullDog);
+        animalCrying(bird);
+
         System.out.println("----------끝-----------");
 
     }
+    static void animalCrying(Animal animal){
+        animal.crying();
+
+        if(animal instanceof BullDog){
+            BullDog bullDog = (BullDog) animal;
+            bullDog.jump();
+        }
+    }
+
 }
 
 class Animal{
     void crying() {
         System.out.println("동물이 운다~");
     }
+
 }
 class Cat extends Animal{
     @Override
@@ -84,6 +107,7 @@ class Dog extends Animal{
     void crying(){
         System.out.println("멍~ 멍~");
     }
+
 }
 class BullDog extends Dog{
     @Override

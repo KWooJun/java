@@ -5,10 +5,14 @@ public class OverridingEquals {
         String s1 = new String("10");
         String s2 = new String("10");
 
-        System.out.println("s1.equals(s2) : " + s1.equals(s2));
-
         NumBox n1 = new NumBox(10);
         NumBox n2 = new NumBox(10);
+        NumBox n3 = new NumBox(13);
+
+        System.out.println("s1 == s2 : " + (s1 == s2));
+        System.out.println("s1.equals(s2) : " + s1.equals(s2));
+        System.out.println("s1.equals(s2) : " + s1.equals(s2));
+
 
         System.out.println("n1 : " + n1);
         System.out.println("n2 : " + n2);
@@ -19,7 +23,9 @@ public class OverridingEquals {
 
         System.out.println("n1 == n2 : " + (n1 == n2));
         //NumBox 객체가 서로 다른 값을 가지고 있으면 true 뜨도록
-        System.out.println("n1.equals(n2) : " + n1.equals(n2));
+        System.out.println("n1.equals(n2) : " + n1.equals(n2)); //true
+        System.out.println("n1.equals(s1) : " + n1.equals(s1)); //false
+        System.out.println("n1.equals(n3) : " + n1.equals(n3)); //false
 
     }
 }
@@ -32,7 +38,21 @@ class NumBox{
     }
     @Override
     public boolean equals(Object object){
-        return false;
+        if(!(object instanceof NumBox)){ //NumBox 와 다른 타입이면 return false
+            return false;
+        }
+        NumBox nb = (NumBox)object;
+//        return num == nb.getNum(); //NumBox 에 있는 값과 num 값을 비교
+        return this.num == nb.num; //getNum()을 사용하지 않아도 접근 가능
+    }
+
+    public boolean equals2(Object object){
+        return toString().equals(object.toString());
+    }
+
+
+    public int getNum() {
+        return num;
     }
 
     @Override

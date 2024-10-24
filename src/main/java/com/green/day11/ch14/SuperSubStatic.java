@@ -8,7 +8,7 @@ public class SuperSubStatic {
         sub1.showCount();
     }
 }
-
+//클래스 앞에 퍼블릭은 딱 하나만 가능하다. 파일명이랑 클래스명이 같을때
 class SuperCLS{
     protected static int count;
 
