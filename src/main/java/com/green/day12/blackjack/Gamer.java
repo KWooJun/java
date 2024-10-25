@@ -9,7 +9,7 @@ public class Gamer {
     //멤버필드 선언, 변수명은 cards
 
     private final List<Card> cards;
-    private int point;
+    protected int point;
 
     public Gamer(){
         cards = new ArrayList();
@@ -25,9 +25,13 @@ public class Gamer {
         int val = Integer.parseInt(str); //val 변수에 10 정수값이 주입된다.
         cards.add(c);
     }
+    public int getPoint(){
+        return point;
+    }
     public void showYourCards(){
         for (Card card : cards){ System.out.println(card); }
 //        for(int i = 0; i < cards.size(); i++){System.out.println(cards.get(i));}
+
     }
     public List<Card> openCards(){
         return cards;
