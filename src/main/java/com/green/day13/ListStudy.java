@@ -1,5 +1,9 @@
 package com.green.day13;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class ListStudy {
     /*
     List 인터페이스 ,Interface(인터페이스)객체화가 불가능 하다.
@@ -11,5 +15,27 @@ public class ListStudy {
 
     List 변수명 = new ArrayList();
     List 변수명 = new LinkedList();
+    이렇게 작성이 가능하다.
     */
+
+    public static void main(String[] args){
+        List list = new ArrayList();
+        list.add(10); //0번방 10값이 주입
+        list.add(20); //1번방 20값이 주입
+        List list2 = (ArrayList)list;
+        list2.add(30); //2번방 주입
+        list2.add("하하"); //3번방 주입
+
+        Object[] arr2 = new Object[4];
+        arr2[0] = 10;
+        arr2[1] = "하하";
+
+        int val0 = (int)list.get(0);
+        String val3 = (String)list.get(3);
+        System.out.println("val0 : " + val0);
+        System.out.println("val3 : " + val3 );
+
+        System.out.println(list);
+        System.out.println(list2);
+    }
 }
