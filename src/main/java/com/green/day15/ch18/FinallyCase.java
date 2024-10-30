@@ -30,9 +30,39 @@ class FinallyCase2{
             Path path = Paths.get("D:/Simple.txt");//절대경로 (full 경로)
             writer = Files.newBufferedWriter(path);
             writer.write("FinallyCase");
-            writer.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        try {
+            writer.close();
+        } catch (IOException e) {
+
+        }
+        System.out.println("-- 끝 --");
     }
 }
+
+class FinallyCase3{
+    public static void main(String[] args) {
+        BufferedWriter writer = null;
+        try{
+            Path path = Paths.get("D:/Simple.txt");//절대경로 (full 경로)
+            writer = Files.newBufferedWriter(path);
+            writer.write("FinallyCase");
+            return;
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        finally { //(실행보장)예외가 발생해도 안해도 무조건 실행되는 부분(메소드에서 return 을 만나도 실행)
+            System.out.println("실행이 되나 안되나");
+            try {
+                if(writer != null){
+                    writer.close();
+                }
+            } catch (IOException e) {
+            }
+        }
+        System.out.println("-- 끝 --");
+    }
+}
+//궁금증 : return 이 주는 값을 finally 에서 바꾸고 실행이 가능한가?
