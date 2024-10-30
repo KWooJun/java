@@ -12,6 +12,7 @@ public class MyExceptionClass {
         }
         System.out.println("-------끝---------");
     }
+
     public static int readAge() throws ReadAgeException{
         Scanner scan = new Scanner(System.in);
 

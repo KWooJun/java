@@ -2,9 +2,9 @@ package com.green.day15.ch21;
 
 public class FruitAndBox2Generic{
     public static void main(String[] args) {
-        BoxGeneric<Apple> appleBox = new BoxGeneric(new Apple());
+        BoxGeneric<Apple> appleBox = new BoxGeneric<>(new Apple());
         Apple apple = appleBox.getBox();
-        BoxGeneric<Orange> OrangeBox = new BoxGeneric(new Orange());
+        BoxGeneric<Orange> OrangeBox = new BoxGeneric<>(new Orange());
         Orange orange = OrangeBox.getBox();
 
         //new 부분에 <>를 생략하면 객체는 타입이 제네릭 타입은 Object 가 되는 것 같음
@@ -12,6 +12,7 @@ public class FruitAndBox2Generic{
         //new 부분에 <>를 작성하는 것이 성능에 도움이 된다.
         BoxGeneric<Orange> OrangeBox2 = new BoxGeneric(new String());
         OrangeBox2.getBox();
+        //BoxGeneric<Orange> OrangeBox2 = new BoxGeneric<>(new String());
 
     }
 }

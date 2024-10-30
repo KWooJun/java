@@ -66,3 +66,4 @@ class FinallyCase3{
     }
 }
 //궁금증 : return 이 주는 값을 finally 에서 바꾸고 실행이 가능한가?
+// finally 는 catch 문 이후에만 쓸수 있는 것인가?
